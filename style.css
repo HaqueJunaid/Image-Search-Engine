@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    padding: 5rem 3rem;
+    position: relative;
+    background: linear-gradient(to bottom, #673ab7, #512da8);
+}
+
+.input-section {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+}
+
+.input-section h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    margin-bottom: 1.4rem;
+}
+
+.input-area {
+    display: flex;
+    width: 150%;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+    border-radius: 5px;
+}
+
+.input-area input::placeholder {
+    color: #fff;
+}
+
+.input-area input {
+    outline: none;
+    width: 100%;
+    padding: 0.8rem 0.8rem;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.267);
+    border: none;
+    color: #fff;
+}
+
+.btn {
+    padding: 0.8rem 1.2rem;
+    background-color: orangered;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: rgb(255, 89, 28);
+}
+
+.image-section {
+    margin-top: 14%;
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.image-section .image {
+    width: 100%;
+    height: 330px;
+    background-color: wheat;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.addMorebtn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none; 
+    bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+    .main {
+        padding: 2rem;
+    }
+
+    .input-section {
+        width: 100%;
+    }
+
+    .input-section h1 {
+        font-size: 2rem;
+        line-height: 1;
+    }
+
+    .input-area {
+        width: 80%;
+    }
+
+    .image-section {
+        margin-top: 30%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* Adjust positioning for smaller screens if needed */
+    .addMorebtn {
+        bottom: 0.5rem; /* Adjust as needed */
+    }
+}
